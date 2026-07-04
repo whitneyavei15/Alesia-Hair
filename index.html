@@ -107,7 +107,7 @@
   .booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{outline:none;border-color:var(--pink);}
   .booking-form label{font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(253,252,250,0.55);margin-bottom:-6px;}
   .booking-form option{color:#1c1a17;}
-  .btn{margin-top:8px;background:var(--white);color:var(--black);padding:14px 30px;font-size:0.78rem;letter-spacing:0.07em;text-transform:uppercase;border:none;cursor:pointer;width:fit-content;transition:background 0.3s ease,color 0.3s ease;}
+  .btn{display:inline-block;margin-top:8px;background:var(--white);color:var(--black);padding:14px 30px;font-size:0.78rem;letter-spacing:0.07em;text-transform:uppercase;border:none;cursor:pointer;width:fit-content;text-decoration:none;transition:background 0.3s ease,color 0.3s ease;}
   .btn:hover{background:var(--pink);}
 
   footer{
@@ -231,34 +231,16 @@
 
 <section id="book" class="booking">
   <div class="wrap">
-    <div class="booking-grid">
+    <div class="booking-grid" style="grid-template-columns:1fr;max-width:520px;margin:0 auto;text-align:center;">
       <div class="booking-info">
         <span class="eyebrow">Free Consultation</span>
         <h2>Let's talk about your hair.</h2>
-        <p>Every booking starts with a free consultation with Alesia — just a conversation about the look you have in mind.</p>
+        <p style="margin-left:auto;margin-right:auto;">Every booking starts with a free consultation with Alesia — just a conversation about the look you have in mind. Reach out to get started.</p>
+        <a href="mailto:alesiambiasi@gmail.com" class="btn" style="margin:10px auto 34px;">Email Alesia</a>
         <div class="info-row"><span>Based In</span><span>Utah County & Southern Utah — travel available</span></div>
         <div class="info-row"><span>Booking</span><span>4–8 weeks out for parties of 3+</span></div>
         <div class="info-row"><span>Contact</span><span>alesiambiasi@gmail.com</span></div>
       </div>
-      <form class="booking-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Request Sent';">
-        <label>Name</label>
-        <input type="text" placeholder="Your name" required>
-        <label>Email</label>
-        <input type="email" placeholder="you@email.com" required>
-        <label>Occasion</label>
-        <select required>
-          <option value="" disabled selected>Select one</option>
-          <option>Wedding Day</option>
-          <option>Bridesmaid Party</option>
-          <option>Dance / Prom</option>
-          <option>Special Event</option>
-        </select>
-        <label>Date &amp; Party Size</label>
-        <input type="text" placeholder="e.g. Sept 12, party of 5">
-        <label>Notes</label>
-        <textarea rows="3" placeholder="Tell us about the look you're after"></textarea>
-        <button type="submit" class="btn">Request Free Consultation</button>
-      </form>
     </div>
   </div>
 </section>
